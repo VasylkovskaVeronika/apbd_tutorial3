@@ -8,7 +8,7 @@ namespace apbd_tutorial3.Exceptions
 {
     internal class OverfillException: Exception
     {
-        public OverfillException() { }
+        public OverfillException(Container container) { }
 
         public OverfillException(string? message) : base(message)
         {

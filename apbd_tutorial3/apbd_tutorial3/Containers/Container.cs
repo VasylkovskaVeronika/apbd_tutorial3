@@ -12,7 +12,13 @@ namespace apbd_tutorial3.Containers
     public class Container : IContainer
     {
         public double CargoMass { get; set; }
+        public double Height { get; set; }
+        public double TareWeight { get; set; }
+        public double Depth { get; set; }
+        public static int Id { get; }
+        public SerialNumber Number { get; set; }
 
+        public double MaximumPayload { get; set; }
         protected Container(double cargoMass)
         {
             CargoMass = cargoMass;
@@ -20,12 +26,20 @@ namespace apbd_tutorial3.Containers
 
         public void Load(double cargoMass)
         {
-            throw new NotImplementedException();
+            if (cargoMass + this.CargoMass > MaximumPayload)
+                throw new OverfillException();
+            else
+                this.CargoMass += cargoMass;
         }
 
         public void Unload()
         {
-            throw new NotImplementedException();
+            CargoMass = 0;
+        }
+
+        public virtual string? ToString()
+        {
+
         }
     }
 }
