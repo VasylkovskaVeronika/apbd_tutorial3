@@ -21,5 +21,10 @@ namespace apbd_tutorial3.Containers
         {
             this.CargoMass = (this.MaximumPayload / 100) * 5;
         }
+
+        public void NotifyAboutHazard()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

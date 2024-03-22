@@ -1,4 +1,5 @@
-﻿using apbd_tutorial3.interfaces;
+﻿using apbd_tutorial3.Exceptions;
+using apbd_tutorial3.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace apbd_tutorial3.Containers
         public double TareWeight { get; set; }
         public double Depth { get; set; }
         public static int Id { get; }
-        public SerialNumber Number { get; set; }
+        //public SerialNumber Number { get; set; }
 
         public double MaximumPayload { get; set; }
         protected Container(double cargoMass)
@@ -37,9 +38,9 @@ namespace apbd_tutorial3.Containers
             CargoMass = 0;
         }
 
-        public virtual string? ToString()
+        public override string? ToString()
         {
-
+            return base.ToString();
         }
     }
 }

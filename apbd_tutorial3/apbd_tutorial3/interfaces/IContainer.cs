@@ -10,5 +10,6 @@ namespace apbd_tutorial3.interfaces
     {
         void Unload();
         void Load(double cargoMass);
+        string? ToString();
     }
 }

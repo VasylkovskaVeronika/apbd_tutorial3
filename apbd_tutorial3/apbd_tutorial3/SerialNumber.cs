@@ -8,8 +8,8 @@ namespace apbd_tutorial3
 {
     class SerialNumber
     {
-        public int Id { get; set; }
-
+        public static int Id { get; set; }
+        public static string Rest { get; set; }
 
     }
 }
